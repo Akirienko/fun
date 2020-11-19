@@ -1,0 +1,171 @@
+@import config
+
+.overlay
+  overflow: hidden
+
+.menu
+  margin: 50px 0
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  li
+    list-style-type: none
+    .menu__link
+      font-style: normal
+      font-weight: normal
+      font-size: 11px
+      line-height: 22px
+      letter-spacing: 1.1px
+      text-transform: uppercase
+      color: #4E4E4E
+      text-decoration: none
+      margin-right: 70px
+      &:hover
+        color: #57A4A4
+
+.burger
+  background-color: #000
+  margin-top: 30px
+  padding: 15px
+  max-width: 50px
+  float: right
+  margin-bottom: 30px
+  display: none
+  .line
+    width: 20px
+    height: 2px
+    background-color: #fff
+    transition: all .4s
+    margin-bottom: 3px
+
+.menu-active
+  display: block !important
+
+.toggle .line1
+  transform: rotate(-45deg) translate(-5px, 6px)
+
+.toggle .line2
+  opacity: 0
+
+.toggle .line3
+  transform: rotate(45deg) translate(-1px, -2px)
+
+.posts
+  margin-top: 70px
+  &-title
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    text-transform: uppercase
+    color: #4E4E4E
+    margin-bottom: 30px
+  .post-content
+    margin-bottom: 30px
+    &__text--title
+      font-weight: bold
+      font-size: 16px
+      line-height: 30px
+      color: #4E4E4E
+      margin: 0
+    &__text--span
+      font-weight: normal
+      font-size: 12px
+      line-height: 20px
+      color: #7C7C7C
+    &__text--text
+      font-size: 14px
+      line-height: 26px
+      color: #5C5C5C
+      margin-top: 15px
+
+.instagram
+  background-color: #F7F7F7
+  &-titles
+    display: flex
+    justify-content: space-between
+    margin: 50px 0 25px
+    .titles
+      font-weight: bold
+      font-size: 16px
+      line-height: 30px
+      color: #4E4E4E
+      margin: 0
+  .images
+    margin-bottom: 30px
+    img
+
+footer
+  background: #000000
+  text-align: center
+  .footer-title
+    font-weight: bold
+    font-size: 16px
+    line-height: 22px
+    text-transform: uppercase
+    color: #FEFEFE
+    margin-top: 70px
+  .footer-text
+    font-weight: normal
+    font-size: 16px
+    line-height: 28px
+    text-align: center
+    color: #B9B9B9
+    max-width: 680px
+    margin: 0 auto
+  .footer-icons
+    display: flex
+    justify-content: center
+    margin: 35px 0
+    img
+      padding-right: 5px
+  .footer-contacts
+    font-weight: normal
+    font-size: 16px
+    line-height: 26px
+    color: #B9B9B9
+
+@media ( max-width: 1200px )
+  .menu__link
+    margin-right: 30px !important
+
+  .images
+    div:last-of-type
+      display: none
+
+@media ( max-width: 770px )
+  .menu
+    flex-direction: column
+    background-color: #F5F5F5
+    display: none
+    position: absolute
+    z-index: 1
+    padding: 0
+    text-align: start
+    right: 15px
+    top: 25px
+    li:hover
+      background: #E5E5E5
+    &__link
+      padding: 5px 80px 5px 20px
+
+  .burger
+    display: block
+
+  .post-content__text
+    p:last-of-type
+      display: none
+
+  .images
+    div:nth-last-child(-n+3)
+      display: none
+
+  .instagram-titles
+    h5:last-of-type
+      display: none
+
+  @media ( max-width: 460px )
+    .footer-text
+      font-size: 13px !important
+    .footer-contacts
+      font-size: 12px !important
